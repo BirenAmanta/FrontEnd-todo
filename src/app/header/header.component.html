@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="">TODOsite</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ms-auto" >
+        <div class="navbar-nav navbar-left" *ngIf="auth.isLogedIn()" >
+          <a class="nav-link" aria-current="page" routerLink="">Home</a>
+          <a class="nav-link" routerLink="todo" >TODOS</a>
+        </div>
+        <div class="navbar-nav  me-auto">
+            <a class="nav-link" *ngIf="!auth.isLogedIn()" routerLink="login">Login</a>
+            <a class="nav-link" *ngIf="auth.isLogedIn()"routerLink="logout">Logout</a>
+          </div>
+      </div>
+    </div>
+  </nav>
+
